@@ -5,7 +5,7 @@ import PackageDescription
 let binaryURL =
     "https://github.com/reservepaytech/reservepay-ios/releases/download/1.0.0/ReservepaySDK.xcframework.zip"
 let binaryChecksum =
-    "2a6a45c7e2582d71cfcf1b368de6e7882ceced910b4b71398fc33abfb5ed9164"
+    "ff76991c1f9a6fb6e3ad9adf0f1ab0bd1725cb7e108eb7b5912a2ece125ae632"
 
 let package = Package(
     name: "ReservepaySDK",
