@@ -178,31 +178,31 @@ private final class KotlinExpiryFieldBox: ObservableObject {
     }
 }
 
-// MARK: - CVC
+// MARK: - CVV
 
-public struct CvcFieldHost: View {
+public struct CvvFieldHost: View {
     private let content: AnyView
 
     public init(_ placeholder: String, appearance: ReservepaySecureFieldAppearance = ReservepaySecureFieldAppearance()) {
-        content = AnyView(_OwnedCvcFieldHost(placeholder: placeholder, appearance: appearance))
+        content = AnyView(_OwnedCvvFieldHost(placeholder: placeholder, appearance: appearance))
     }
 
     public init(_ key: LocalizedStringKey, appearance: ReservepaySecureFieldAppearance = ReservepaySecureFieldAppearance()) {
         self.init(key.resolvedForFieldPlaceholder(), appearance: appearance)
     }
 
-    public init(field: ReservepayCvcField) {
+    public init(field: ReservepayCvvField) {
         content = AnyView(SharedFacadeFieldHost(viewController: field.viewController))
     }
 
     public var body: some View { content }
 }
 
-private struct _OwnedCvcFieldHost: View {
-    @State private var box: KotlinCvcFieldBox
+private struct _OwnedCvvFieldHost: View {
+    @State private var box: KotlinCvvFieldBox
 
     init(placeholder: String, appearance: ReservepaySecureFieldAppearance) {
-        _box = State(initialValue: KotlinCvcFieldBox(placeholder: placeholder, appearance: appearance))
+        _box = State(initialValue: KotlinCvvFieldBox(placeholder: placeholder, appearance: appearance))
     }
 
     var body: some View {
@@ -210,10 +210,10 @@ private struct _OwnedCvcFieldHost: View {
     }
 }
 
-private final class KotlinCvcFieldBox: ObservableObject {
-    let field: ReservepayCvcField
+private final class KotlinCvvFieldBox: ObservableObject {
+    let field: ReservepayCvvField
     init(placeholder: String, appearance: ReservepaySecureFieldAppearance) {
-        field = ReservepayCvcField()
+        field = ReservepayCvvField()
         field.setHint(text: placeholder)
         field.setChromeStyle(
             normalBackground: appearance.normalBackground,

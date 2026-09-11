@@ -3,9 +3,9 @@ import PackageDescription
 
 // binaryURL + binaryChecksum must match the tagged GitHub Release asset (zip name and bytes).
 let binaryURL =
-    "https://github.com/reservepaytech/reservepay-ios/releases/download/1.0.0/ReservepaySDK.xcframework.zip"
+    "https://github.com/reservepaytech/reservepay-ios/releases/download/1.0.1/ReservepaySDK.xcframework.zip"
 let binaryChecksum =
-    "2a6a45c7e2582d71cfcf1b368de6e7882ceced910b4b71398fc33abfb5ed9164"
+    "6e8ebb639a7c4310ebb19b9c3c0432509ba2e656a71ac17bdb65eca1ddd15838"
 
 let package = Package(
     name: "ReservepaySDK",
